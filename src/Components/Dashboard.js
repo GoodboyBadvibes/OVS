@@ -25,7 +25,7 @@ const Dashboard = () => {
       }
     </style> */}
        
-       <div className={' h-screen bg-backdark float-start relative transition-all '+(expand? style.dashboardNotExpanded : style.dashboardExpanded)} style={{color:'white'}} >
+       <div className={' h-screen bg-backdark float-start relative transition-all shadow-2xl '+(expand? style.dashboardNotExpanded : style.dashboardExpanded)} style={{color:'white'}} >
 
           <div className={' w-fit m-auto'} style={{paddingBottom:'70px'}}>
             
