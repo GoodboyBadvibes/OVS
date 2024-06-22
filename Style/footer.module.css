@@ -1,0 +1,27 @@
+.header{
+  font-size: 49px;
+}
+.flexHeader{
+  font-size: 16px;
+}
+
+@media screen and (max-width:425px){
+  .header{
+    font-size: 39px;
+  }
+}
+@media screen and (min-width:640px){
+  /* .flexHeader{
+    padding-top: 35px ;
+  } */
+}
+@media screen and (max-width:639px){
+  .copy{
+    padding-bottom: 10px ;
+  }
+}
+@media screen and (max-width:767px){
+  .footerIconDiv{
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,30 @@
+.header{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.39px;
+}
+.title{
+  font-size: 18px ;
+  font-weight: 400;
+  line-height: 21.29px;
+}
+.nav{
+  padding: 30px 50px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dp{
+  background-image: url('/dp.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  transition: 1s linear;
+}
+.dp:hover{
+   transform: scale(2);
+}

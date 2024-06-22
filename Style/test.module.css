@@ -1,0 +1,9 @@
+.testBox{
+  padding: 40px;
+}
+
+@media screen and (max-width:315px){
+  .testBox{
+    padding: 20px;
+  }
+}
