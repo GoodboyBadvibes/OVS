@@ -1,13 +1,46 @@
 .dashboardExpanded{
   padding: 40px 50px 0 50px;
-  margin: 0 30px 0 0;
+  /* margin: 0 30px 0 0; */
   
 }
 .dashboardNotExpanded{
   padding: 40px 5px 0 5px;
-  margin: 0 30px 0 0;
+  /* margin: 0 30px 0 0; */
 }
+.dashboardImage{
+  padding-bottom: 70px;
+}
+/* .expanded{
+  padding: 0 30px 0 0;
+  
+}
+.notExpanded{
+  padding: 0 30px 0 0;
+} */
 
+
+
+@media screen and (max-width:670px){
+  .dashboardExpanded{
+    padding: 20px 20px 0 20px;
+  }
+  .dashboardNotExpanded{
+    padding: 20px 5px 0 5px;
+    /* margin: 0 30px 0 0; */
+  }
+  .dashboardImage{
+    padding-bottom: 50px ;
+  }
+}
+@media screen and (max-width:639px){
+  .dashboardExpanded{
+    display: none;
+    
+  }
+  .dashboardNotExpanded{
+    display: none;
+  }
+}
 @media screen and (max-width:315px){
   .dashboardExpanded{
     padding: 40px 20px 0 20px;

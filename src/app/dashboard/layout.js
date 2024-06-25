@@ -1,7 +1,6 @@
-import Dashboard from "@/Components/Dashboard"
 import "../globals.css";
 import 'remixicon/fonts/remixicon.css'
-import Dashbar from "@/Components/Dashbar";
+
 
 export const metadata = {
   title: 'Next.js',
@@ -13,8 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       
       <body>
-      <Dashboard/>
-      <Dashbar/>
+      
       {children}
       </body>
     </html>

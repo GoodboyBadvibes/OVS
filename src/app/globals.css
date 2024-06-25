@@ -35,3 +35,35 @@ body {
 .flex{
   display: flex;
 }
+
+body{
+  max-width: 1440px ;
+  margin: auto;
+  /* background-color: black; */
+}
+
+
+.contentExpanded{
+  padding-left: 230px !important;
+}
+.contentNotExpanded{
+  padding-left: 90px !important;
+}
+
+@media screen and (max-width:670px){
+  .contentExpanded{
+    padding-left: 150px !important;
+  }
+  .contentNotExpanded{
+    padding-left: 70px !important;
+  }
+}
+
+@media screen and (max-width:639px){
+  .contentExpanded{
+    padding-left: 20px !important;
+  }
+  .contentNotExpanded{
+    padding-left: 20px !important;
+  }
+}

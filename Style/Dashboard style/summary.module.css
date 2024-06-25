@@ -1,0 +1,85 @@
+.summary{
+  padding-right: 50px;
+}
+.greeting{
+  font-size: 36px;
+  font-weight: 500 ;
+  padding: 40px 0px 10px;
+  line-height: 42.59px;
+}
+.figures{
+  font-size: 30px;
+  font-weight: 500 ;
+}
+.figuresTitle{
+  font-size: 13px;
+  /* font-weight: 500 ; */
+}
+.figuresCard{
+ gap: 10px;
+ padding: 24px;
+}
+.figuresGrid{
+ grid-template-columns: repeat(3,1fr);
+ gap: 50px;
+ padding-top: 30px;
+}
+
+@media screen and (max-width:1279px){
+  .figuresGrid{
+    gap: 40px;
+   }
+}
+@media screen and (max-width:1023px){
+  .figuresGrid{
+    gap: 25px;
+   }
+}
+@media screen and (max-width:840px){
+  .figures{
+    font-size: 20px;
+  }
+  .figuresTitle{
+    font-size: 10px;
+  }
+  .figuresCard{
+    gap: 10px;
+    padding: 14px;
+    /* color: #bebebe; */
+   }
+  /* .figuresImage{
+    padding: 5px !important;
+    width: 30px;
+   } */
+}
+@media screen and (max-width:709px){
+  .summary{
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width:767px){
+  .figuresGrid{
+    gap: 10px;
+   }
+}
+@media screen and (max-width:670px){
+  .greeting{
+    font-size: 26px;
+    padding: 0px 0px;
+  }
+}
+@media screen and (max-width:639px){
+   .greeting{
+    padding-top: 30px ;
+    font-size: 32px;
+  }
+  .figuresCard{
+    margin-bottom: 20px;
+   }
+   .figures{
+    font-size: 30px;
+  }
+  .figuresTitle{
+    font-size: 13px;
+  }
+}

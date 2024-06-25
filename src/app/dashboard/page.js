@@ -1,15 +1,25 @@
 import React from 'react'
+import Dashboard from "@/Components/Dashboard"
+import Dashbar from "@/Components/Dashbar";
+import Summary from '../../Components/Summary';
 
-const Dashboard = () => {
+const DashboardPage = () => {
+
+
+
   return (
-    <div>
-     
-
-
+    <div className='m-auto' style={{maxWidth:"1440px"}}>
+      <div className= ' fixed left-0 justify-between items-start m-auto'  >
+        <Dashbar/>
+        <Dashboard/>
+        
+        {/* <Summary /> */}
     </div>
+    </div>
+    
   )
 }
 
-Dashboard.layout = false
+DashboardPage.layout = false
 
-export default Dashboard
+export default DashboardPage
