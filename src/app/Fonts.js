@@ -1,3 +1,6 @@
-// import { Inter, Jura } from "next/font/google";
+import { Inter, Jura } from "next/font/google";
 
-// export const jura = Jura({ subsets: ["latin"] });
+export const jura = Jura({ 
+  subsets: ["latin"],
+  weights:[300,400,500,600,700]
+});

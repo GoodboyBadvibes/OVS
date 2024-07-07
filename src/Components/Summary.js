@@ -2,12 +2,13 @@ import React from 'react'
 import style from '../../Style/Dashboard style/summary.module.css'
 import navStyle from '../../Style/Dashboard style/dashbar.module.css'
 import Image from 'next/image'
+import Table from '../Components/Table'
 
 const Summary = ({expand}) => {
   return (
     <>
     <div >
-      <div id=' summary' className={' bg-dashboardgrey w-screen transition-all '+(expand?' contentNotExpanded ':' contentExpanded ')+style.summary} style={{height:'5000px', paddingTop:'100px', maxWidth:'1440px'}}>
+      <div id=' summary' className={' bg-dashboardgrey  transition-all '+(expand?' contentNotExpanded ':' contentExpanded ')+style.summary} style={{  paddingTop:'100px',paddingBottom:'100px', maxWidth:'1440px'}}>
 
         <div className=' flex justify-between sm:hidden'>
 
@@ -61,6 +62,10 @@ const Summary = ({expand}) => {
               <p className={style.figuresTitle}>Earnings</p>
             </div>
          </div>
+        </div>
+
+        <div>
+          <Table />
         </div>
 
         

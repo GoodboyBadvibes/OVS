@@ -1,4 +1,4 @@
-// import { jura } from "./Fonts";
+import { jura } from "../Fonts";
 import Image from "next/image";
 import Link from "next/link";
 import "../globals.css";
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
 
  
   return (
-    <html lang="en">
+    <html lang="en" className={jura.className}>
       <body >
         <Nav />
         {children}

@@ -50,6 +50,10 @@ body{
   padding-left: 90px !important;
 }
 
+td, th{
+  padding: 10px;
+}
+
 @media screen and (max-width:670px){
   .contentExpanded{
     padding-left: 150px !important;
