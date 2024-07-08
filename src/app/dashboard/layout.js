@@ -1,6 +1,6 @@
 import "../globals.css";
 import 'remixicon/fonts/remixicon.css'
-
+import { jura } from "../Fonts";
 
 export const metadata = {
   title: 'Next.js',
@@ -9,9 +9,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
  return (
-    <html lang="en">
+    <html lang="en" >
       
-      <body>
+      <body className={jura.className}>
       
       {children}
       </body>

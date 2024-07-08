@@ -1,6 +1,3 @@
-
-
-
 import React from 'react'
 import Button from '../../Components/Button'
 import Testimonials from '@/Components/Testimonials'

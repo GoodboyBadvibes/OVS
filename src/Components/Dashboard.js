@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { useState } from 'react'
 import style from '../../Style/Dashboard style/dashboard.module.css'
 import Summary from './Summary'
-import { Document } from 'postcss'
 
 const Dashboard = () => {
 
@@ -20,23 +19,12 @@ const Dashboard = () => {
       document.querySelector('#dashbar').classList.remove('contentExpanded')
       document.querySelector('#dashbar').classList.add('contentNotExpanded')
     }
-    console.log(document.querySelector('#dashbar').classList)
     
   }
 
   return (
     <>
 
-    {/* <style jsx>
-      {
-        `
-        .clip{
-          clip-path: inset(0 65px 0 0 )
-
-        }
-        `
-      }
-    </style> */}
     <aside className=' relative'>
       
        <div className={' h-screen bg-backdark fixed transition-all shadow-2xl z-10  '+(expand? style.dashboardNotExpanded : style.dashboardExpanded)} style={{color:'white'}} >

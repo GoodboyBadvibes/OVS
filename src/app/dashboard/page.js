@@ -1,7 +1,6 @@
 import React from 'react'
 import Dashboard from "@/Components/Dashboard"
 import Dashbar from "@/Components/Dashbar";
-import Summary from '../../Components/Summary';
 
 const DashboardPage = () => {
 
@@ -12,8 +11,6 @@ const DashboardPage = () => {
       <div className= '  left-0 justify-between items-start m-auto'  >
         <Dashbar/>
         <Dashboard/>
-        
-        {/* <Summary /> */}
     </div>
     </div>
     
