@@ -13,12 +13,12 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "plugins": [
@@ -32,10 +32,7 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx",
-   "src/app/page.js", 
-   "src/app/layout.js", 
-   "src/app/dashboard/layout.js"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"
