@@ -6,7 +6,7 @@ import Link from "next/link";
 import Button from "./Button";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
-import style from '../../Style/nav.module.css'
+import style from '../Style/nav.module.css'
 
 export default function Nav() {
 

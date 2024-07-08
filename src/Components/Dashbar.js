@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import style from '../../Style/Dashboard style/dashbar.module.css'
+import style from '../Style/Dashboard style/dashbar.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 

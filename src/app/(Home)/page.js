@@ -4,7 +4,7 @@ import Testimonials from '@/Components/Testimonials'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/Components/Footer'
-import style from '../../../Style/home.module.css'
+import style from '../../Style/home.module.css'
 
 const home = () => {
   return (

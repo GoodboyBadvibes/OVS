@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import homestyle from '../../Style/home.module.css'
-import style from '../../Style/test.module.css'
+import homestyle from '../Style/home.module.css'
+import style from '../Style/test.module.css'
 
 const Testimonials = () => {
 
