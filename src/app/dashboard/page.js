@@ -7,7 +7,7 @@ const DashboardPage = () => {
 
 
   return (
-    <div className='m-auto bg-dashboardgrey' style={{maxWidth:"1440px", overflowX:'auto'}}>
+    <div className='m-auto bg-dashboardgrey' style={{maxWidth:"1440px"}}>
       <div className= '  left-0 justify-between items-start m-auto'  >
         <Dashbar/>
         <Dashboard/>
