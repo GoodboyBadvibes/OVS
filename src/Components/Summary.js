@@ -8,7 +8,7 @@ const Summary = ({expand}) => {
   return (
     <>
     <div >
-      <div id=' summary' className={' bg-dashboardgrey  transition-all '+(expand?' contentNotExpanded ':' contentExpanded ')+style.summary} style={{  paddingTop:'100px',paddingBottom:'100px', maxWidth:'1440px'}}>
+      <div id=' summary' className={' bg-dashboardgrey  transition-all h-screen '+(expand?' contentNotExpanded ':' contentExpanded ')+style.summary} style={{  paddingTop:'100px',paddingBottom:'100px', maxWidth:'1440px'}}>
 
         <div className=' flex justify-between sm:hidden'>
 
