@@ -1,12 +1,31 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useRef } from 'react'
 import Button from '../../Components/Button'
 import Testimonials from '@/Components/Testimonials'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/Components/Footer'
 import style from '../../Style/home.module.css'
+// import Typedjs from 'wc-typed-js'
+import Typed from 'typed.js'
 
 const home = () => {
+  const el = useRef(null)
+
+  useEffect(() => {
+    const typed = new Typed (el.current, {
+      strings:["business", "enterprise", "company", "firm", "venture", "organisation", "establishment", "shop", "trade", "outlet", "store"],
+      typeSpeed: 50,
+      loop: true,
+      loopCount: Infinity,
+      backSpeed:125
+    });
+
+    return ()=>{
+      typed.destroy();
+    };
+  }, []);
+  
   return (
     <>
       <div className={''} style={{backgroundColor:'rgb(36,36,36)', color:'white'}}>
@@ -42,10 +61,12 @@ const home = () => {
       <div style={{ paddingBottom:''}}>
       <div className={' md:flex justify-between align-middle items-center '+style.section+' '+style.sectionGap} style={{ gap:'70px'}}>
       
-        <div className='md:w-1/2' style={{lineHeight:'2.5'}}>
+        <div className='md:w-1/2 App' style={{lineHeight:'2.5'}}>
+          {/* <wc-typed-js strings=" business, enterprise, company, firm, venture, organisation, establishment, shop, trade, outlet, store"> */}
           <h1 className={' leading-relaxed '+style.header}>
-          No coding, Makes it easier for you to create a website for your business
+          No coding, Makes it easier for you to create a website for your <span ref={el}>business</span>
           </h1>
+          {/* </wc-typed-js> */}
 
           <p className='font-thin leading-relaxed' style={{fontSize:'25px',marginTop:'50px'}}>
           Not only that, you can also create a website without coding using only the templates provided or you can buy templates by creative creators 
