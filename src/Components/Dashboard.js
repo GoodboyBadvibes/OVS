@@ -31,8 +31,8 @@ const Dashboard = () => {
 
           <div className={' w-fit m-auto '+style.dashboardImage} >
             
-           { !expand &&<Image src={'/logo.png'} width={100} height={100} />}
-           { expand &&<Image src={'/logocropped.png'} className=' sm:w-auto' width={35} height={35} />}
+           { !expand &&<Image src={'/logo.png'} width={100} height={100} priority={true} />}
+           { expand &&<Image src={'/logocropped.png'} className=' sm:w-auto' width={35} height={35} priority={true}/>}
           </div>
 
           <div className='w-fit  m-auto '>

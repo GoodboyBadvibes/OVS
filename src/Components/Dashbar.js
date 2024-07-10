@@ -66,7 +66,7 @@ const Dashbar = () => {
           <i className=" ri-close-fill cursor-pointer text-end items-end border-2 " style={{margin:'20px 25px', fontSize:'15px', borderRadius:'100%', padding:'0px 4px'}} onClick={()=>{setNavMenu(false)}}></i>
         </div>
 
-        <Image className=' m-auto' src={'/logo.png'} width={150} height={150} />
+        <Image className=' m-auto' src={'/logo.png'} width={150} height={150} priority={true}/>
 
         <div>
         <div  className=" text-center items-center w-fit  m-auto " style={{fontSize:'30px', marginTop:'50px'}}>

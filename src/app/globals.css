@@ -71,3 +71,11 @@ td, th{
     padding-left: 20px !important;
   }
 }
+@media screen and (max-width:350px){
+  .contentExpanded{
+    padding-left: 10px !important;
+  }
+  .contentNotExpanded{
+    padding-left: 10px !important;
+  }
+}
