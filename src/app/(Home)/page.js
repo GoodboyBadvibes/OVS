@@ -14,7 +14,7 @@ const home = () => {
 
   useEffect(() => {
     const typed = new Typed (el.current, {
-      strings:["business", "enterprise", "company", "firm", "venture", "organisation", "establishment", "shop", "trade", "outlet", "store"],
+      strings:["business", "enterprise", "company", "firm", "venture", "shop", "trade", "outlet", "store"],
       typeSpeed: 50,
       loop: true,
       loopCount: Infinity,
@@ -64,7 +64,7 @@ const home = () => {
         <div className='md:w-1/2 App' style={{lineHeight:'2.5'}}>
           {/* <wc-typed-js strings=" business, enterprise, company, firm, venture, organisation, establishment, shop, trade, outlet, store"> */}
           <h1 className={' leading-relaxed '+style.header}>
-          No coding, Makes it easier for you to create a website for your <span ref={el}>business</span>
+          No coding, Makes it easier for you to create a website for your  <span ref={el}>business</span>
           </h1>
           {/* </wc-typed-js> */}
 
