@@ -1,8 +1,8 @@
 import React from 'react'
-import style from '../Style/Dashboard style/summary.module.css'
-import navStyle from '../Style/Dashboard style/dashbar.module.css'
+import style from '../../Style/Dashboard style/summary.module.css'
+import navStyle from '../../Style/Dashboard style/dashbar.module.css'
 import Image from 'next/image'
-import Table from '../Components/Table'
+import Table from './Table'
 
 const Summary = ({expand}) => {
   return (

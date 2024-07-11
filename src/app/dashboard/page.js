@@ -1,6 +1,6 @@
 import React from 'react'
-import Dashboard from "@/Components/Dashboard"
-import Dashbar from "@/Components/Dashbar";
+import Dashboard from "@/Components/Dashboard/Dashboard"
+import Dashbar from "@/Components/Dashboard/Dashbar";
 
 const DashboardPage = () => {
 
