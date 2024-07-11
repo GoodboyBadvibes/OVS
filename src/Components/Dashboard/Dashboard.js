@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { useState } from 'react'
 import style from '../../Style/Dashboard style/dashboard.module.css'
+import navStyle from '../../Style/Dashboard style/dashbar.module.css'
 import Summary from './Summary'
 import Website from './Website'
 import Transactions from './Transactions'
@@ -121,7 +122,7 @@ const Dashboard = () => {
 
           <div className=' flex justify-center items-center ' style={{gap:'10px', marginTop:'50px'}}>
 
-                <div className={' rounded-full  bg-standard '+style.dp} style={{ padding:'25px'}} >
+                <div className={' rounded-full  bg-standard '+navStyle.dp} style={{ padding:'25px'}} >
                   {/* <Image src={'/dp.png'} className=' ' style={{backgroundImage:' ', borderRadius:'100%',objectFit:'cover',objectPosition:'cover'}}  width={50} height={50} /> */}
                 </div>
 

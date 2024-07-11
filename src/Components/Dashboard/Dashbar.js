@@ -44,7 +44,7 @@ const Dashbar = () => {
           </div>
          </div>
          
-            <i className=" ri-menu-fill float-end  sm:hidden cursor-pointer " style={{fontSize:'25px', float:'inline-end'}} onClick={()=>{document.querySelector('#navMenu').classList.remove('hidden')}}></i>
+            <i className=" ri-menu-fill float-right sm:hidden cursor-pointer " style={{fontSize:'25px', float:'right'}} onClick={()=>{document.querySelector('#navMenu').classList.remove('hidden')}}></i>
         </div >
         
       </div>
