@@ -5,6 +5,10 @@ import Image from 'next/image'
 import { useState } from 'react'
 import style from '../../Style/Dashboard style/dashboard.module.css'
 import Summary from './Summary'
+import Website from './Website'
+import Transactions from './Transactions'
+import Products from './Products'
+import Settings from './Settings'
 
 const Dashboard = () => {
 
@@ -46,9 +50,9 @@ const Dashboard = () => {
               {!expand &&<h1>Website</h1>}
             </div>
 
-            <div className='flex w-fit cursor-pointer hover:text-standard' style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('messages')}}>
+            <div className='flex w-fit cursor-pointer hover:text-standard' style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('transactions')}}>
               <i className='ri-discuss-fill'></i>
-              {!expand &&<h1>Messages</h1>}
+              {!expand &&<h1>Transactions</h1>}
             </div>
 
             <div className='flex w-fit cursor-pointer hover:text-standard' style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('products')}}>
@@ -70,7 +74,11 @@ const Dashboard = () => {
     </aside>
        
 
-       <Summary expand={expand} />
+      { component==='summary'&& <Summary expand={expand} />}
+      { component==='website'&& <Website expand={expand} />}
+      { component==='transactions'&& <Transactions expand={expand} />}
+      { component==='products'&& <Products expand={expand} />}
+      { component==='settings'&& <Settings expand={expand} />}
     </>
 
     
