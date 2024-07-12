@@ -56,7 +56,7 @@ td, th{
 
 @media screen and (max-width:670px){
   .contentExpanded{
-    padding-left: 150px !important;
+    padding-left: 165px !important;
   }
   .contentNotExpanded{
     padding-left: 70px !important;
