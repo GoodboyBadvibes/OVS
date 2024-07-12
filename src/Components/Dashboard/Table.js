@@ -67,7 +67,7 @@ const Table = () => {
 
 
   return (
-    <div style={{overflowX:'scroll', borderRadius:'15px', marginTop:'50px'}}>
+    <div className={style.table} style={{overflowX:'scroll', borderRadius:'15px', marginTop:'50px',scrollbarWidth:'0'}}>
       
       <table style={{width:' 100%', backgroundColor:'white', borderRadius:'10px', minWidth:'1160px'}}>
 
