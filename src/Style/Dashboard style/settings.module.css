@@ -1,0 +1,35 @@
+.component{
+  padding: 5px;
+  padding-top:20px ;
+  transition: 0.5s;
+}
+.title{
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+.title:hover{
+  color:black
+}
+.title:hover{
+  color:black
+}
+.notActive{
+  color:rgba(0, 0, 0, 0.5)
+}
+.info{
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+.settingItem{
+  padding: 24px;
+  padding-bottom: 0px;
+}
+.settingItem:hover .title{
+  color:black
+}
+.settingItem:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 20px
+}
