@@ -1,3 +1,6 @@
+.table::-webkit-scrollbar{
+  display: none;
+}
 .body{
   border-radius: 0px ;
 }
