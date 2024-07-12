@@ -1,4 +1,4 @@
-.summary{
+.content{
   padding-right: 30px;
 }
 .greeting{
@@ -47,7 +47,7 @@
    }
 }
 @media screen and (max-width:709px){
-  .summary{
+  .content{
     padding-right: 20px;
   }
 }
@@ -61,7 +61,7 @@
     font-size: 26px;
     padding: 0px 0px;
   }
-  .summary{
+  .content{
     padding-right: 10px;
   }
 }
@@ -79,12 +79,12 @@
   .figuresTitle{
     font-size: 13px;
   }
-  .summary{
+  .content{
     padding-right: 20px;
   }
 }
 @media screen and (max-width:350px){
-  .summary{
+  .content{
     padding-right: 10px;
   }
 }

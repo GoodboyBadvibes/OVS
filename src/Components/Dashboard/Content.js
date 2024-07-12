@@ -11,7 +11,7 @@ import Settings from './Settings'
 const Content = ({expand, component}) => {
   return (
     <>
-    <div id=' summary' className={' bg-dashboardgrey  transition-all '+(expand?' contentNotExpanded ':' contentExpanded ')+style.summary} style={{  paddingTop:'100px',paddingBottom:'100px', maxWidth:'1440px'}}>
+    <div id=' summary' className={' bg-dashboardgrey  transition-all '+(expand?' contentNotExpanded ':' contentExpanded ')+style.content} style={{  paddingTop:'100px',paddingBottom:'100px', maxWidth:'1440px'}}>
 
 <div className=' flex justify-between sm:hidden'>
 
