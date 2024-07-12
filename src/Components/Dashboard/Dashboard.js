@@ -10,6 +10,7 @@ import Website from './Website'
 import Transactions from './Transactions'
 import Products from './Products'
 import Settings from './Settings'
+import Dashbar from './Dashbar'
 
 const Dashboard = () => {
 
@@ -30,6 +31,9 @@ const Dashboard = () => {
   return (
     <>
 
+    <div className= '  left-0 justify-between items-start m-auto'  >
+    <Dashbar title={component}/>
+
     <aside className=' relative'>
       
        <div className={' h-screen bg-backdark fixed transition-all shadow-2xl z-10  '+(expand? style.dashboardNotExpanded : style.dashboardExpanded)} style={{color:'white'}} >
@@ -41,27 +45,27 @@ const Dashboard = () => {
           </div>
 
           <div className='w-fit  m-auto '>
-            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==="summary"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}} onClick={()=>{setComponent('summary')}}>
+            <div id='Summary' className={' flex w-fit cursor-pointer hover:text-standard '+(component==="summary"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}} onClick={()=>{setComponent('summary')}}>
               <i className='ri-line-chart-fill'></i>
               {!expand &&<h1>Summary</h1>}
             </div>
 
-            <div className={'flex w-fit cursor-pointer hover:text-standard '+(component==="website"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('website')}}>
+            <div id='Website' className={'flex w-fit cursor-pointer hover:text-standard '+(component==="website"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('website')}}>
               <i className='ri-flashlight-fill'></i>
               {!expand &&<h1>Website</h1>}
             </div>
 
-            <div className={'flex w-fit cursor-pointer hover:text-standard '+(component==="transactions"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('transactions')}}>
+            <div id='Transactions' className={'flex w-fit cursor-pointer hover:text-standard '+(component==="transactions"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('transactions')}}>
               <i className='ri-discuss-fill'></i>
               {!expand &&<h1>Transactions</h1>}
             </div>
 
-            <div className={'flex w-fit cursor-pointer hover:text-standard '+(component==="products"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('products')}}>
+            <div id='Products' className={'flex w-fit cursor-pointer hover:text-standard '+(component==="products"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('products')}}>
               <i className='ri-line-chart-fill'></i>
               {!expand &&<h1>Products</h1>}
             </div>
 
-            <div className={'flex w-fit cursor-pointer hover:text-standard '+(component==="settings"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('settings')}}>
+            <div id='Settings' className={'flex w-fit cursor-pointer hover:text-standard '+(component==="settings"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('settings')}}>
               <i className='ri-settings-2-fill'></i>
               {!expand &&<h1>Settings</h1>}
             </div>
@@ -73,13 +77,14 @@ const Dashboard = () => {
 
        </div>
     </aside>
+    </div>
        
 
-      { component==='summary'&& <Summary expand={expand} />}
-      { component==='website'&& <Website expand={expand} />}
-      { component==='transactions'&& <Transactions expand={expand} />}
-      { component==='products'&& <Products expand={expand} />}
-      { component==='settings'&& <Settings expand={expand} />}
+      { component==='summary'&& <Summary  expand={expand} />}
+      { component==='website'&& <Website  expand={expand} />}
+      { component==='transactions'&& <Transactions  expand={expand} />}
+      { component==='products'&& <Products  expand={expand} />}
+      { component==='settings'&& <Settings  expand={expand} />}
 
 
      

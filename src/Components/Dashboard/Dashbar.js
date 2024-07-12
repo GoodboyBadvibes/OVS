@@ -1,13 +1,12 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from '../../Style/Dashboard style/dashbar.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Dashbar = () => {
-
-  
+const Dashbar = ({title}) => {
+   
 
   return (
     <>
@@ -16,7 +15,7 @@ const Dashbar = () => {
         <div className=' hidden  sm:flex justify-between items-center'> 
            <div>
             <h1 className={ style.header}>Dashboard</h1>
-            <h3 className={ style.title}>Summary</h3>
+            <h3 className={ style.title}>{title}</h3>
           </div>
 
           <div>
