@@ -8,26 +8,7 @@ const Summary = ({expand}) => {
   return (
     <>
     <div >
-      <div id=' summary' className={' bg-dashboardgrey  transition-all '+(expand?' contentNotExpanded ':' contentExpanded ')+style.summary} style={{  paddingTop:'100px',paddingBottom:'100px', maxWidth:'1440px'}}>
-
-        <div className=' flex justify-between sm:hidden'>
-
-          <div>
-            <h1 className={ navStyle.header}>Dashboard</h1>
-            <h3 className={ navStyle.title}>Summary</h3>
-          </div>
-          
-          <div className='flex items-start gap-3'>
-            <div className=' rounded-full ' style={{padding:'7px', backgroundColor:'#bebebe'}}>
-              <Image  src={'/search-normal.png'} width={20} height={20} />
-            </div>
-            <div className='  rounded-full ' style={{padding:'7px', backgroundColor:'#bebebe'}}>
-              <Image  src={'/noNotificationIcon.png'} width={20} height={20} />
-            </div>
-            
-          </div>
-
-        </div>
+      
         <h1 className={style.greeting}> Welcome, Mighty Ness</h1>
         <h4 style={{fontSize:'16px', fontWeight:'500', lineHeight:'18.93px '}}> Here's an overview of your activities</h4>
 
@@ -70,7 +51,7 @@ const Summary = ({expand}) => {
 
         
       </div>
-    </div>
+    
       
     </>
     

@@ -11,11 +11,12 @@ import Transactions from './Transactions'
 import Products from './Products'
 import Settings from './Settings'
 import Dashbar from './Dashbar'
+import Content from './Content'
 
 const Dashboard = () => {
 
   const [expand, setExpand] = useState(false);
-  const [component, setComponent] = useState('summary')
+  const [component, setComponent] = useState('Summary')
 
   const navExpand = ()=>{
     if(expand){
@@ -45,27 +46,27 @@ const Dashboard = () => {
           </div>
 
           <div className='w-fit  m-auto '>
-            <div id='Summary' className={' flex w-fit cursor-pointer hover:text-standard '+(component==="summary"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}} onClick={()=>{setComponent('summary')}}>
+            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==='Summary'?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}} onClick={()=>{setComponent('Summary')}}>
               <i className='ri-line-chart-fill'></i>
               {!expand &&<h1>Summary</h1>}
             </div>
 
-            <div id='Website' className={'flex w-fit cursor-pointer hover:text-standard '+(component==="website"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('website')}}>
+            <div className={'flex w-fit cursor-pointer hover:text-standard '+(component==='Website'?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('Website')}}>
               <i className='ri-flashlight-fill'></i>
               {!expand &&<h1>Website</h1>}
             </div>
 
-            <div id='Transactions' className={'flex w-fit cursor-pointer hover:text-standard '+(component==="transactions"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('transactions')}}>
+            <div className={'flex w-fit cursor-pointer hover:text-standard '+(component==='Transactions'?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('Transactions')}}>
               <i className='ri-discuss-fill'></i>
               {!expand &&<h1>Transactions</h1>}
             </div>
 
-            <div id='Products' className={'flex w-fit cursor-pointer hover:text-standard '+(component==="products"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('products')}}>
+            <div className={'flex w-fit cursor-pointer hover:text-standard '+(component==='Products'?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('Products')}}>
               <i className='ri-line-chart-fill'></i>
               {!expand &&<h1>Products</h1>}
             </div>
 
-            <div id='Settings' className={'flex w-fit cursor-pointer hover:text-standard '+(component==="settings"?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('settings')}}>
+            <div className={'flex w-fit cursor-pointer hover:text-standard '+(component==='Settings'?" text-standard":" ")} style={{ gap:'15px', fontSize:'14px',marginBottom:'16px'}}  onClick={()=>{setComponent('Settings')}}>
               <i className='ri-settings-2-fill'></i>
               {!expand &&<h1>Settings</h1>}
             </div>
@@ -80,15 +81,11 @@ const Dashboard = () => {
     </div>
        
 
-      { component==='summary'&& <Summary  expand={expand} />}
-      { component==='website'&& <Website  expand={expand} />}
-      { component==='transactions'&& <Transactions  expand={expand} />}
-      { component==='products'&& <Products  expand={expand} />}
-      { component==='settings'&& <Settings  expand={expand} />}
 
 
+     <Content component={component} expand={expand} />
      
-
+      {/* This section is for dashboard mobile menu which is hidden for larger screens */}
       <div style={{backgroundColor:'rgb(36,36,36)', color:'white'}} id='navMenu' className=' fixed top-0 sm:hidden w-full h-full hidden' >
         <div className=" flex justify-end">
           <i className=" ri-close-fill cursor-pointer text-end items-end border-2 " style={{margin:'20px 25px', fontSize:'15px', borderRadius:'100%', padding:'0px 4px'}} onClick={()=>{document.querySelector('#navMenu').classList.add('hidden')}}></i>
@@ -99,27 +96,27 @@ const Dashboard = () => {
         <div>
         <div  className=" text-center items-center w-fit  m-auto " style={{fontSize:'30px', marginTop:'50px'}}>
         
-            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==="summary"?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}} onClick={()=>{setComponent('summary'), document.querySelector('#navMenu').classList.add('hidden')}}>
+            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==='Summary'?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}} onClick={()=>{setComponent('Summary'), document.querySelector('#navMenu').classList.add('hidden')}}>
               <i className='ri-line-chart-fill'></i>
               {<h1>Summary</h1>}
             </div>
 
-            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==="website"?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}}  onClick={()=>{setComponent('website'), document.querySelector('#navMenu').classList.add('hidden')}}>
+            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==='Website'?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}}  onClick={()=>{setComponent('Website'), document.querySelector('#navMenu').classList.add('hidden')}}>
               <i className='ri-flashlight-fill'></i>
               {<h1>Website</h1>}
             </div>
 
-            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==="transactions"?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}}  onClick={()=>{setComponent('transactions'), document.querySelector('#navMenu').classList.add('hidden')}}>
+            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==='Transactions'?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}}  onClick={()=>{setComponent('Transactions'), document.querySelector('#navMenu').classList.add('hidden')}}>
               <i className='ri-discuss-fill'></i>
               {<h1>Transactions</h1>}
             </div>
 
-            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==="products"?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}}  onClick={()=>{setComponent('products'), document.querySelector('#navMenu').classList.add('hidden')}}>
+            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==='Products'?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}}  onClick={()=>{setComponent('Products'), document.querySelector('#navMenu').classList.add('hidden')}}>
               <i className='ri-line-chart-fill'></i>
               {<h1>Products</h1>}
             </div>
 
-            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==="settings"?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}}  onClick={()=>{setComponent('settings'), document.querySelector('#navMenu').classList.add('hidden')}}>
+            <div className={' flex w-fit cursor-pointer hover:text-standard '+(component==='Settings'?" text-standard":" ")} style={{ gap:'15px', fontSize:'20px',marginBottom:'20px'}}  onClick={()=>{setComponent('Settings'), document.querySelector('#navMenu').classList.add('hidden')}}>
               <i className='ri-settings-2-fill'></i>
               {<h1>Settings</h1>}
             </div>
