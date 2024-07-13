@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import style from '../../Style/Dashboard style/settings.module.css'
-import Image from 'next/image'
-import edit from '../../../public/edit.png'
+import UserProfile from './settings/UserProfile'
 
 const Settings = () => {
 
   const [setting, setSetting] = useState('profile')
+  
 
 
 
@@ -98,46 +98,7 @@ const Settings = () => {
 
       </div>
       {/* settings output section  */}
-      <div className={style.output+' '+style.profileOutput} style={{ backgroundColor:'white', overflowX:'hidden'}}>
-        <div className=' flex justify-between items-center' style={{borderBottom:' 0.5px solid rgba(0, 0, 0, 0.5)'}}>
-          <h1 className={style.outputTitle}>User Profile</h1>
-          <Image src={edit} className={' cursor-pointer'} />
-        </div>
-
-        <div className={style.dp} style={{ backgroundImage:`url(${'/dp.jpg'})`}}> </div>
-
-        <div>
-
-
-          <div className={' flex justify-between items-start '+style.fProfile}>
-            <p>Full name</p>
-            <p>Mightyness</p>
-          </div>
-
-          <div className={' flex justify-between items-start '+style.fProfile}>
-            <p>Email</p>
-            <p>batboy27@gmail.com</p>
-          </div>
-
-          <div className={' flex justify-between items-start '+style.fProfile}>
-            <p>Phone Number</p>
-            <p>07000054781</p>
-          </div>
-
-          <div className={' flex justify-between items-start '+style.fProfile}>
-            <p>Role</p>
-            <p>Vendor</p>
-          </div>
-
-          <div className={' flex justify-between items-start '+style.fProfile}>
-            <p>Date joined</p>
-            <p>Aug 21st, 2034</p>
-          </div>
-
-
-        </div>
-
-      </div>
+       <UserProfile />
 
      </div>
     </>
