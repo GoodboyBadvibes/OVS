@@ -11,7 +11,7 @@ const Settings = () => {
 
   return (
     <>
-     <div className={style.component+ ' flex justify-between gap-10'}>
+     <div className={style.component+ ' flex justify-between gap-5 items-start'}>
       {/* settings board section */}
       <div className={style.menu}  style={{backgroundColor:'white', borderRadius:'20px', maxWidth:'364px'}}>
 
@@ -98,7 +98,7 @@ const Settings = () => {
 
       </div>
       {/* settings output section  */}
-      <div className={style.output} style={{ backgroundColor:'white'}}>
+      <div className={style.output+' '+style.profileOutput} style={{ backgroundColor:'white', overflowX:'hidden'}}>
         <div className=' flex justify-between items-center' style={{borderBottom:' 0.5px solid rgba(0, 0, 0, 0.5)'}}>
           <h1 className={style.outputTitle}>User Profile</h1>
           <Image src={edit} className={' cursor-pointer'} />
@@ -109,27 +109,27 @@ const Settings = () => {
         <div>
 
 
-          <div className={' flex justify-between items-center '+style.fProfile}>
+          <div className={' flex justify-between items-start '+style.fProfile}>
             <p>Full name</p>
             <p>Mightyness</p>
           </div>
 
-          <div className={' flex justify-between items-center '+style.fProfile}>
+          <div className={' flex justify-between items-start '+style.fProfile}>
             <p>Email</p>
             <p>batboy27@gmail.com</p>
           </div>
 
-          <div className={' flex justify-between items-center '+style.fProfile}>
+          <div className={' flex justify-between items-start '+style.fProfile}>
             <p>Phone Number</p>
             <p>07000054781</p>
           </div>
 
-          <div className={' flex justify-between items-center '+style.fProfile}>
+          <div className={' flex justify-between items-start '+style.fProfile}>
             <p>Role</p>
             <p>Vendor</p>
           </div>
 
-          <div className={' flex justify-between items-center '+style.fProfile}>
+          <div className={' flex justify-between items-start '+style.fProfile}>
             <p>Date joined</p>
             <p>Aug 21st, 2034</p>
           </div>

@@ -6,7 +6,7 @@ const DashboardPage = () => {
 
 
   return (
-    <div className='m-auto bg-dashboardgrey' style={{maxWidth:"1440px"}}>
+    <div className='m-auto bg-dashboardgrey overflow-x-hidden' style={{maxWidth:"1440px", overflowX:'hidden'}}>
       
         <Dashboard/>
     {/* </div> */}
