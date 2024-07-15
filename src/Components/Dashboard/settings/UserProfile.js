@@ -29,12 +29,12 @@ const UserProfile = () => {
   let roleWidth= ' '
   let dateWidth= ' '
 
-  useEffect(() => {
-    // width={(nameRef.current !==null)?measureText(profile.name,nameRef):1}
+  // useEffect(() => {
+  //   // width={(nameRef.current !==null)?measureText(profile.name,nameRef):1}
 
-    nameWidth = nameRef.current?measureText(profile.name, nameRef).toString()+'px':''
-    console.log(nameWidth)
-  })
+  //   nameWidth = nameRef.current?measureText(profile.name, nameRef).toString()+'px':''
+  //   console.log(nameWidth)
+  // })
   
   return (
     <>
