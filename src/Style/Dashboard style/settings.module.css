@@ -110,11 +110,19 @@
 }
 @media screen and (max-width:450px){
   .menu{
+    min-width: 91vw;
+    margin-right: 200px;
+  }
+}
+@media screen and (max-width:400px){
+  .menu{
     min-width: 90vw;
     margin-right: 200px;
   }
-  .output{
-  min-width: 90vw;
-
 }
+@media screen and (max-width:350px){
+  .menu{
+    min-width: 94vw;
+    margin-right: 200px;
+  }
 }
