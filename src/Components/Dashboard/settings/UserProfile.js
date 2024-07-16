@@ -76,7 +76,7 @@ const UserProfile = () => {
 
 
         </div>
-        {!edit&&<Button text={'save'} style={{color:'white', float:'right', marginTop:'10px', fontSize:'16px', padding:'10px 25px'}} />}
+        {!edit&&<Button text={'save'} style={{color:'white', float:'right', marginTop:'10px', padding:'10px 25px'}} lass={style.buttonText}/>}
 
       </div>
     </>

@@ -6,12 +6,14 @@ const Settings = () => {
 
   const [setting, setSetting] = useState('profile')
   
-
+  const scrollSettings =() =>{
+   document.querySelector('#output').scroll
+  }
 
 
   return (
     <>
-     <div className={style.component+ ' flex justify-between gap-5 items-start'}>
+     <div id='settings' className={style.component+ ' flex justify-between gap-5 items-start'}>
       {/* settings board section */}
       <div className={style.menu}  style={{backgroundColor:'white', borderRadius:'20px', maxWidth:'364px'}}>
 
@@ -98,7 +100,10 @@ const Settings = () => {
 
       </div>
       {/* settings output section  */}
-       <UserProfile />
+      <div id='output'>
+        <UserProfile />
+      </div>
+       
 
      </div>
     </>
