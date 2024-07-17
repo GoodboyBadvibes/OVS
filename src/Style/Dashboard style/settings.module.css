@@ -2,6 +2,8 @@
   padding: 5px;
   padding-top:20px ;
   transition: 0.5s;
+  overflow-y: hidden;
+  /* height: 60vh; */
 }
 .menu{
   width: 40%;

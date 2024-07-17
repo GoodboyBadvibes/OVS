@@ -8,8 +8,11 @@ const Settings = () => {
   const num = 1000
   
   const scrollSettings =(id) =>{
-  //  document.querySelector(id).scrollIntoView({behavior:'smooth', inline:'end',block:'end'})
+  //  document.querySelector(id).scrollIntoView({behavior:'smooth', inline:'end',block:'start'})
    document.querySelector(id).scrollTo({left:num, behavior:'smooth'})
+   window.scrollTo({top:0, behavior:'instant'})
+  //  document.querySelector(id).scrollTo(num, 1000)
+  //  document.querySelector("#settings").scrollTo({top:1000})
    console.log(num)
   }
 
