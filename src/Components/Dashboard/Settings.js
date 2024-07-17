@@ -106,9 +106,7 @@ const Settings = () => {
 
       </div>
       {/* settings output section  */}
-      <div id='output'>
         <UserProfile />
-      </div>
        
 
      </div>
