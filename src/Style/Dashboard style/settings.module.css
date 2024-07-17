@@ -106,7 +106,7 @@
   }
   .output{
   min-width: 85vw;
-  margin-right: 16px;
+  margin-right: 20px;
 
 }
 .settingItem{
@@ -114,7 +114,8 @@
   padding-bottom: 0px;
 }
 .component{
-  overflow-x: scroll
+  overflow-x: hidden;
+  /* width:103%; */
 }
 .profileOutput{
   padding: 20px;

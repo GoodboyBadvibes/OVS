@@ -5,9 +5,12 @@ import UserProfile from './settings/UserProfile'
 const Settings = () => {
 
   const [setting, setSetting] = useState('profile')
+  const num = 1000
   
   const scrollSettings =(id) =>{
-   document.querySelector(id).scrollIntoView({behavior:'smooth', inline:'end',block:'end'})
+  //  document.querySelector(id).scrollIntoView({behavior:'smooth', inline:'end',block:'end'})
+   document.querySelector(id).scrollTo({left:num, behavior:'smooth'})
+   console.log(num)
   }
 
 
@@ -15,7 +18,7 @@ const Settings = () => {
     <>
      <div id='settings' className={style.component+ ' flex justify-between gap-5 items-start'}>
       {/* settings board section */}
-      <div className={style.menu}  style={{backgroundColor:'white', borderRadius:'20px', maxWidth:'364px'}} onClick={()=>{scrollSettings("#output")}}>
+      <div className={style.menu}  style={{backgroundColor:'white', borderRadius:'20px', maxWidth:'364px'}} onClick={()=>{scrollSettings("#settings")}}>
 
         <div className={style.settingItem} onClick={()=>{setSetting('profile')}}>
           <div className={' flex justify-between items-center cursor-pointer '} style={{borderBottom:' 0.5px solid rgba(0, 0, 0, 0.5)', paddingBottom:'19px'}}>
