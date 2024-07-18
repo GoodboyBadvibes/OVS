@@ -106,7 +106,7 @@ const Settings = () => {
       </div>
       {/* settings output section  */}
       <div id='output'  className={style.output}>
-        <div className={' flex gap-1 w-fit '} style={{ backgroundColor:'#bebebe', padding:'5px', borderRadius:'10px', marginBottom:'10px', marginLeft:"10px", fontSize:'13px'}} onClick={()=>{scrollSettings("#settings",-1000)}} >
+        <div className={' flex gap-1 w-fit '+style.d500} style={{ backgroundColor:'#bebebe', padding:'5px', borderRadius:'10px', marginBottom:'10px', marginLeft:"5px", fontSize:'13px'}} onClick={()=>{scrollSettings("#settings",-1000)}} >
         <i className= 'ri-arrow-left-wide-fill' ></i>
         <h1>Back</h1>
 
