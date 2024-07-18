@@ -38,7 +38,7 @@ const UserProfile = () => {
   
   return (
     <>
-       <div className={style.output+' '+style.profileOutput} style={{ backgroundColor:'white', overflowX:'hidden'}}>
+       <div className={' '+style.profileOutput} style={{ backgroundColor:'white', overflowX:'hidden'}}>
         <div className=' flex justify-between items-center' style={{borderBottom:' 0.5px solid rgba(0, 0, 0, 0.5)'}}>
           <h1 className={style.outputTitle}>User Profile</h1>
           <Image src={editIcon} className={' cursor-pointer'} onClick={()=>{setEdit(!edit)}} />

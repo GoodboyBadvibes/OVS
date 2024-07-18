@@ -37,10 +37,12 @@
 }
 
 .output{
-  padding: 24px;
-  border-radius: 20px;
   width: 65%;
   max-width: 706px;
+}
+.profileOutput{
+  border-radius: 20px;
+  padding: 24px;
 }
 .outputTitle{
   font-size: 24px;

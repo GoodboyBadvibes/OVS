@@ -5,9 +5,8 @@ import UserProfile from './settings/UserProfile'
 const Settings = () => {
 
   const [setting, setSetting] = useState('profile')
-  const num = 1000
   
-  const scrollSettings =(id) =>{
+  const scrollSettings =(id,num) =>{
   //  document.querySelector(id).scrollIntoView({behavior:'smooth', inline:'end',block:'start'})
    document.querySelector(id).scrollTo({left:num, behavior:'smooth'})
    window.scrollTo({top:0, behavior:'instant'})
@@ -21,7 +20,7 @@ const Settings = () => {
     <>
      <div id='settings' className={style.component+ ' flex justify-between gap-5 items-start'}>
       {/* settings board section */}
-      <div className={style.menu}  style={{backgroundColor:'white', borderRadius:'20px', maxWidth:'364px'}} onClick={()=>{scrollSettings("#settings")}}>
+      <div className={style.menu}  style={{backgroundColor:'white', borderRadius:'20px', maxWidth:'364px'}} onClick={()=>{scrollSettings("#settings",1000)}}>
 
         <div className={style.settingItem} onClick={()=>{setSetting('profile')}}>
           <div className={' flex justify-between items-center cursor-pointer '} style={{borderBottom:' 0.5px solid rgba(0, 0, 0, 0.5)', paddingBottom:'19px'}}>
@@ -106,7 +105,14 @@ const Settings = () => {
 
       </div>
       {/* settings output section  */}
+      <div id='output'  className={style.output}>
+        <div className={' flex gap-1 w-fit '} style={{ backgroundColor:'#bebebe', padding:'5px', borderRadius:'10px', marginBottom:'10px', marginLeft:"10px", fontSize:'13px'}} onClick={()=>{scrollSettings("#settings",-1000)}} >
+        <i className= 'ri-arrow-left-wide-fill' ></i>
+        <h1>Back</h1>
+
+        </div>
         <UserProfile />
+      </div>
        
 
      </div>
