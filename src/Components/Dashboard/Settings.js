@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import style from '../../Style/Dashboard style/settings.module.css'
 import UserProfile from './settings/UserProfile'
+import ChangePassword from './settings/ChangePassword'
 
 const Settings = () => {
 
@@ -20,7 +21,7 @@ const Settings = () => {
     <>
      <div id='settings' className={style.component+ ' flex justify-between gap-5 items-start'}>
       {/* settings board section */}
-      <div className={style.menu}  style={{backgroundColor:'white', borderRadius:'20px', maxWidth:'364px'}} onClick={()=>{scrollSettings("#settings",1000)}}>
+      <div className={style.menu}  style={{backgroundColor:'white', borderRadius:'20px'}} onClick={()=>{scrollSettings("#settings",1000)}}>
 
         <div className={style.settingItem} onClick={()=>{setSetting('profile')}}>
           <div className={' flex justify-between items-center cursor-pointer '} style={{borderBottom:' 0.5px solid rgba(0, 0, 0, 0.5)', paddingBottom:'19px'}}>
@@ -105,13 +106,18 @@ const Settings = () => {
 
       </div>
       {/* settings output section  */}
-      <div id='output'  className={style.output}>
+      <div className={style.outerOutput}>
         <div className={' flex gap-1 w-fit '+style.d500} style={{ backgroundColor:'#bebebe', padding:'5px', borderRadius:'10px', marginBottom:'10px', marginLeft:"5px", fontSize:'13px'}} onClick={()=>{scrollSettings("#settings",-1000)}} >
         <i className= 'ri-arrow-left-wide-fill' ></i>
         <h1>Back</h1>
 
         </div>
-        <UserProfile />
+      {/* <div> */}
+      <div id='output'  className={style.innerOutput} style={{ backgroundColor:'white', overflowX:'hidden'}}>
+        { setting==='profile'&&<UserProfile /> }
+        { setting==='password'&&<ChangePassword /> }
+      </div>
+
       </div>
        
 
