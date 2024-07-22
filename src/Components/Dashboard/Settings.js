@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import style from '../../Style/Dashboard style/settings.module.css'
 import UserProfile from './settings/UserProfile'
 import ChangePassword from './settings/ChangePassword'
+import Notifications from './settings/Notifications'
 
 const Settings = () => {
 
@@ -13,7 +14,6 @@ const Settings = () => {
    window.scrollTo({top:0, behavior:'instant'})
   //  document.querySelector(id).scrollTo(num, 1000)
   //  document.querySelector("#settings").scrollTo({top:1000})
-   console.log(num)
   }
 
 
@@ -118,6 +118,7 @@ const Settings = () => {
       <div id='output'  className={style.innerOutput} style={{ backgroundColor:'white', overflowX:'hidden'}}>
         { setting==='profile'&&<UserProfile /> }
         { setting==='password'&&<ChangePassword /> }
+        { setting==='notifications'&&<Notifications /> }
       </div>
 
       </div>
