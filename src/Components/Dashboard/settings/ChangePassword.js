@@ -33,7 +33,7 @@ const ChangePassword = () => {
             <input type="email" placeholder={confirmShow?'Hide':'Show'} value={''} onClick={()=>{setConfirmShow(!confirmShow)}}/>
           </div> 
 
-          <Button text={'Update Password'} style={{color:'white'}}/>
+          <Button text={'Update Password'} style={{color:'white', fontSize:'8px'}}/>
    
         </form>
 
