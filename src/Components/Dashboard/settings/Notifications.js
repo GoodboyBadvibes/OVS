@@ -24,7 +24,7 @@ const Notifications = () => {
                 <h1 className={' '+style.sub}>Push Email Notifications</h1>
               </div>
               {/* <i className={' ri-toggle-fill '+style.toggle}></i> */}
-              <Image width={35} height={20} src={email?'/toggleON.png':'/toggleOff.png'} onClick={()=>{setEmail(!email)}} style={{cursor:'pointer'}}/>
+              <Image width={35} height={20} src={email?'/toggleON.png':'/toggleOff.png'} onClick={()=>{setEmail(!email)}} className={style.toggle}/>
             </div>
             <div className='flex justify-between items-start' style={{paddingTop:'30px'}} >
               <div>
@@ -32,7 +32,7 @@ const Notifications = () => {
                 <h1 className={' '+style.sub}>Push Telegram Notifications</h1>
               </div>
               {/* <i className={' ri-toggle-fill '+style.toggle}></i> */}
-              <Image width={35} height={20} src={push?'/toggleON.png':'/toggleOff.png'} onClick={()=>{setPush(!push)}} style={{cursor:'pointer'}}/>
+              <Image width={35} height={20} src={push?'/toggleON.png':'/toggleOff.png'} onClick={()=>{setPush(!push)}} className={style.toggle}/>
             </div>
             <div className='flex justify-between items-start' style={{paddingTop:'30px'}} >
               <div>
@@ -40,7 +40,7 @@ const Notifications = () => {
                 <h1 className={' '+style.sub}>Push SMS Notifications</h1>
               </div>
               {/* <i className={' ri-toggle-fill '+style.toggle}></i> */}
-              <Image width={35} height={20} src={sms?'/toggleON.png':'/toggleOff.png'} onClick={()=>{setSms(!sms)}} style={{cursor:'pointer'}}/>
+              <Image width={35} height={20} src={sms?'/toggleON.png':'/toggleOff.png'} onClick={()=>{setSms(!sms)}}className={style.toggle} />
             </div>
           </div>
       </div>

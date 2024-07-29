@@ -8,5 +8,6 @@
   color: #25252583;
 }
 .toggle{
-  font-size: 24px;
+  cursor: pointer;
+  
 }
