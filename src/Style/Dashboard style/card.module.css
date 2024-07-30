@@ -1,0 +1,37 @@
+.figures{
+  font-size: 30px;
+  font-weight: 500 ;
+}
+.figuresTitle{
+  font-size: 13px;
+  /* font-weight: 500 ; */
+}
+.figuresCard{
+ gap: 10px;
+ padding: 24px;
+}
+
+
+
+@media screen and (max-width:840px){
+  .figures{
+    font-size: 20px;
+  }
+  .figuresTitle{
+    font-size: 10px;
+  }
+  .figuresCard{
+    padding: 14px;
+   }
+}
+@media screen and (max-width:639px){
+  .figuresCard{
+    margin-bottom: 20px;
+   }
+   .figures{
+    font-size: 30px;
+  }
+  .figuresTitle{
+    font-size: 13px;
+  }
+}
