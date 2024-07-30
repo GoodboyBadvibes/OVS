@@ -1,10 +1,13 @@
 import React from 'react'
+import Card from './Card'
 
 const Products = () => {
   return (
-    <div className='flex justify-center justify-items-center items-center h-screen'>
-      <h1>This page is still under development...</h1>
+    <> 
+    <div>
+      <Card src={'/bag.png'} title={'Total Products'} figure={'10'} />
     </div>
+    </>
   )
 }
 
