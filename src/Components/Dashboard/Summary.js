@@ -6,6 +6,68 @@ import Table from './Table'
 import Card from './Card'
 
 const Summary = ({expand}) => {
+
+  const data = [
+
+    {
+      ID:1,
+      post: 'Risk Management',
+      category:'Psychiatry',
+      customer:'John Doe',
+      status:'successful',
+      date:'12 Nov 2023',      
+    },
+    {
+      ID:2,
+      post: 'Risk Management',
+      category:'Psychiatry',
+      customer:'John Doe',
+      status:'successful',
+      date:'12 Nov 2023',      
+    },
+    {
+      ID:3,
+      post: 'Risk Management',
+      category:'Psychiatry',
+      customer:'John Doe',
+      status:'successful',
+      date:'12 Nov 2023',      
+    },
+    {
+      ID:4,
+      post: 'Risk Management',
+      category:'Psychiatry',
+      customer:'John Doe',
+      status:'successful',
+      date:'12 Nov 2023',      
+    },
+    {
+      ID:5,
+      post: 'Risk Management',
+      category:'Psychiatry',
+      customer:'John Doe',
+      status:'successful',
+      date:'12 Nov 2023',      
+    },
+    {
+      ID:6,
+      post: 'Risk Management',
+      category:'Psychiatry',
+      customer:'John Doe',
+      status:'successful',
+      date:'12 Nov 2023',      
+    },
+    {
+      ID:7,
+      post: 'Risk Management',
+      category: 'Psychiatry',
+      customer: 'John Doe',
+      date: '12 Nov 2023',
+      status: 'successful',
+    },
+   ]
+
+
   return (
     <>
     <div >
@@ -22,7 +84,7 @@ const Summary = ({expand}) => {
         </div>
 
         <div>
-          <Table />
+          <Table data={data} />
         </div>
 
         
