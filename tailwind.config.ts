@@ -15,7 +15,7 @@ const config: Config = {
       },
     },
     colors:{
-      'standard':'rgb(132,159,39)',
+      'standard':'rgb(133,159,39)',
       'standarddark':'rgb(132,159,0)',
       'backdark':'rgb(36,36,36)',
       'dashboardgrey':'#F5F5F5'
