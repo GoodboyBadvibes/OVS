@@ -1,0 +1,182 @@
+.products{
+  padding-top: 20px;
+}
+.addBtn{
+  border: solid 2px rgb(133, 159, 39);
+  border-radius: 50px;
+  padding: 18px 38px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(133, 159, 39);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.addBtn:hover{
+  border: solid 2px rgba(133, 159, 39, 0.581);
+  color: #2e380f;
+  background-color:  #859f2793;
+
+}
+
+.addBtn h1{
+  margin: auto;
+  text-align: center;
+}
+.modalDiv{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2e380f7d;
+}
+.modal{
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.modalTitle{
+  font-size: 32px;
+  font-weight: 700;
+}
+.sub{
+  font-size: 16px;
+  font-weight: 400;
+}
+.input{
+  background-color:  rgba(0, 0, 0, 0.13);
+  padding: 15px;
+  border-radius: 20px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+
+@media screen and (max-width:1090px){
+  .modal{
+    left: 100;
+    margin-left: 200px;
+  }
+}
+@media screen and (max-width:880px){
+  .modalTitle{
+    font-size: 18px;
+  }
+  .sub{
+    font-size: 10px;
+  }
+  .input{
+    font-size: 8px;
+  }
+  .btn{
+    font-size: 10px !important ;
+  }
+}
+/* @media screen and (max-width:970px){
+  .modal{
+    left: 100;
+    margin-left: 200px;
+  }
+} */
+@media screen and (max-width:930px){
+  .addBtn{
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width:767px){
+  .addBtn{
+    padding: 10px 30px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width:700px){
+  .addBtn{
+    padding: 10px 30px;
+    font-size: 8px;
+    font-weight: 500;
+  }
+  .modal{
+    width: 50% ;
+  }
+}
+@media screen and (max-width:639px){
+  .addBtn{
+    padding: 14px 34px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(133, 159, 39);
+    margin-bottom: 20px;
+  }
+  .modal{
+    width: 80%;
+    left: 0;
+    margin-left: 0px;
+  }
+  .modalTitle{
+    font-size: 32px;
+  }
+  .sub{
+    font-size: 16px;
+  }
+  .input{
+    font-size: 12px;
+  }
+  .btn{
+    font-size: 16px !important ;
+  }
+}
+@media screen and (max-width:500px){
+  .modal{
+    width: 80%;
+  }
+  .modalTitle{
+    font-size: 18px;
+  }
+  .sub{
+    font-size: 10px;
+  }
+  .input{
+    font-size: 8px;
+  }
+  .btn{
+    font-size: 10px !important ;
+  }
+}
+@media screen and (max-width:380px){
+  .addBtn{
+    padding: 18px 38px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width:340px){
+  .modal{
+    width: 80%;
+    padding: 10px;
+  }
+  .modalTitle{
+    font-size: 18px;
+  }
+  .sub{
+    font-size: 10px;
+  }
+  .input{
+    font-size: 8px;
+    padding: 7px;
+  }
+  .btn{
+    font-size: 10px !important ;
+  }
+}
+@media screen and (max-width:300px){
+  .modal{
+    width: 90%;
+}
+}
