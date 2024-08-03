@@ -79,7 +79,7 @@ const Products = ({}) => {
           <Card src={'/bag.png'} title={'Total Products'} figure={'10'} style={{}} />
 
           <div className=' sm:flex lg:gap-16 sm:gap-4'>
-            <div className={' '+ style.addBtn}>
+            <div className={' '+ style.addBtn} onClick={()=>{setAddCat(true)}}>
               <h1>Add a Category</h1>
             </div>
             <div className={' '+ style.addBtn}  onClick={()=>{setAddPro(true)}}>
@@ -123,6 +123,31 @@ const Products = ({}) => {
               <textarea className={' '+style.input} placeholder='write description' name="" id=""></textarea>
               </div>
               <Button text={'Add Product'} lass={style.btn}  style={{color:'white', width:'100%',textAlign:'center',fontSize:"16px", margin:"10px auto"}} />
+            </form>
+          </div>
+
+        </div>
+
+      </div>)}
+
+
+
+
+      
+      {addCat&&(<div className={' ' + style.modalDiv}>
+        <div className=' w-full h-full' style={{ display: 'flex', alignItems: ' center', justifyContent: 'center' }} >
+          <div className={' ' + style.modal}>
+            <div className=' flex justify-between items-center pb-4 md:pb-10 lg:pb-12 xl:pb-14'>
+              <h1 className={' '+style.modalTitle}>Add Category</h1>
+              <Image src={close} style={{cursor:'pointer'}} onClick={()=>{setAddCat(false)}}/>
+            </div>
+            <form>
+              <div>
+                <h1 className={' py-7 ' + style.sub}>Category Name</h1>
+                <input className={' '+style.input} type="text" name="" id="" placeholder='enter category name' />
+              </div>
+              
+              <Button text={'Add Category'} lass={style.btn}  style={{color:'white', width:'100%',textAlign:'center',fontSize:"16px", margin:"10px auto"}} />
             </form>
           </div>
 
