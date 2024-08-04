@@ -136,7 +136,7 @@ const Products = ({}) => {
       
       {addCat&&(<div className={' ' + style.modalDiv}>
         <div className=' w-full h-full' style={{ display: 'flex', alignItems: ' center', justifyContent: 'center' }} >
-          <div className={' ' + style.modal}>
+          <div className={' ' + style.modal+" "+ style.cat}>
             <div className=' flex justify-between items-center pb-4 md:pb-10 lg:pb-12 xl:pb-14'>
               <h1 className={' '+style.modalTitle}>Add Category</h1>
               <Image src={close} style={{cursor:'pointer'}} onClick={()=>{setAddCat(false)}}/>
@@ -148,6 +148,19 @@ const Products = ({}) => {
               </div>
               
               <Button text={'Add Category'} lass={style.btn}  style={{color:'white', width:'100%',textAlign:'center',fontSize:"16px", margin:"10px auto"}} />
+
+              <div>
+                <ul className={' '+ style.list}>
+                  {data.map((data)=>(
+                    <li>
+                    <div className={' flex justify-between items-center '+style.listTxt}>
+                      <h1>{data.category}</h1>
+                      <Image src={close} />
+                    </div>
+                  </li>
+                  ))}
+                </ul>
+              </div>
             </form>
           </div>
 

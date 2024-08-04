@@ -53,6 +53,27 @@
   font-weight: 500;
 }
 
+.cat{
+  width: 40%;
+}
+.list{
+  height:200px;
+  overflow-y: scroll;
+}
+.list::-webkit-scrollbar{
+  display: none;
+}
+.listTxt{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 20px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.485);
+  border-radius: 5px 5px 0 0;
+}
+.listTxt:hover{
+  background-color: #859f2793;
+}
+
 
 
 @media screen and (max-width:1090px){
