@@ -10,6 +10,26 @@ const Products = ({}) => {
 
   const [addPro, setAddPro] = useState(false)
   const [addCat, setAddCat] = useState(false)
+  const [newCat, setNewCat] = useState(' ')
+
+  const [category, setCategory] = useState(['Psychiatry','Heartattack','Cancer','Pharmacy','X-ray','General Check Up','AntiMalarial','Counselling'])
+
+
+  const catDelete = (id)=>{
+      setCategory(category.filter((cat, index)=>{return cat != id}))
+  }
+
+  const catRegEx = /^\S.*\S$/
+
+  const addNewCat = ()=>{
+      setNewCat(newCat.trim())
+
+      if(catRegEx.test(newCat.trim())){
+        // category.unshift(newCat)
+        setCategory([newCat.trim(),...category])
+        console.log(''===null)
+      }
+  }
 
   const data = [
 
@@ -70,6 +90,7 @@ const Products = ({}) => {
       status: 'successful',
     },
    ]
+
 
   return (
     <>
@@ -144,18 +165,19 @@ const Products = ({}) => {
             <form>
               <div>
                 <h1 className={' py-7 ' + style.sub}>Category Name</h1>
-                <input className={' '+style.input} type="text" name="" id="" placeholder='enter category name' />
+                <input className={' '+style.input} type="text" name="" id="" placeholder='enter category name' value={newCat} onChange={(e)=>{setNewCat(e.target.value)}}/>
               </div>
               
-              <Button text={'Add Category'} lass={style.btn}  style={{color:'white', width:'100%',textAlign:'center',fontSize:"16px", margin:"10px auto"}} />
-
+              <div onClick={()=>{addNewCat()}}>
+                <Button text={'Add Category'} lass={style.btn} style={{ color: 'white', width: '100%', textAlign: 'center', fontSize: "16px", margin: "10px auto" }} />
+              </div>
               <div>
                 <ul className={' '+ style.list}>
-                  {data.map((data)=>(
-                    <li>
+                  {category.map((data,index)=>(
+                    <li key={index}>
                     <div className={' flex justify-between items-center '+style.listTxt}>
-                      <h1>{data.category}</h1>
-                      <Image src={close} />
+                      <h1>{data}</h1>
+                      <Image src={close} style={{cursor:'pointer'}} onClick={()=>{ catDelete(data)}}/>
                     </div>
                   </li>
                   ))}
