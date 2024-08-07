@@ -10,7 +10,9 @@ const Products = ({}) => {
 
   const [addPro, setAddPro] = useState(false)
   const [addCat, setAddCat] = useState(false)
-  const [newCat, setNewCat] = useState(' ')
+  const [newCat, setNewCat] = useState('')
+
+  const [catExists, setCatExists] = useState(false)
 
   const [category, setCategory] = useState(['Psychiatry','Heartattack','Cancer','Pharmacy','X-ray','General Check Up','AntiMalarial','Counselling'])
 
@@ -19,16 +21,19 @@ const Products = ({}) => {
       setCategory(category.filter((cat, index)=>{return cat != id}))
   }
 
-  const catRegEx = /^\S.*\S$/
+  const catRegEx = /^\S(.*\S)?$/
 
   const addNewCat = ()=>{
-      setNewCat(newCat.trim())
-
+    if(!category.includes(newCat.trim())){
       if(catRegEx.test(newCat.trim())){
-        // category.unshift(newCat)
         setCategory([newCat.trim(),...category])
-        console.log(''===null)
       }
+    }else(
+      setCatExists(true),
+      setTimeout(()=>{setCatExists(false)},5000)
+    )
+      
+    setNewCat('')
   }
 
   const data = [
@@ -164,7 +169,7 @@ const Products = ({}) => {
             </div>
             <form>
               <div>
-                <h1 className={' py-7 ' + style.sub}>Category Name</h1>
+                <h1 className={' py-7 ' + style.sub} style={catExists?{color:'red'}:null}>{catExists?'Category already exists':'Category Name'}</h1>
                 <input className={' '+style.input} type="text" name="" id="" placeholder='enter category name' value={newCat} onChange={(e)=>{setNewCat(e.target.value)}}/>
               </div>
               
