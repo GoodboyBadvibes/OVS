@@ -24,7 +24,8 @@ const Products = ({}) => {
   const catRegEx = /^\S(.*\S)?$/
 
   const addNewCat = ()=>{
-    if(!category.includes(newCat.trim())){
+    // setCatExists((category.map(cat=>cat.toLowerCase())).includes(newCat.trim().toLowerCase()))
+    if(!(category.map(cat=>cat.toLowerCase()).includes(newCat.trim().toLowerCase()))){
       if(catRegEx.test(newCat.trim())){
         setCategory([newCat.trim(),...category])
       }
