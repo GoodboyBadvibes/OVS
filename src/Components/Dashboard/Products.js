@@ -128,25 +128,25 @@ const Products = ({}) => {
             <form>
               <h1 className={' text-standard ' + style.sub} style={{cursor:'pointer'}}>+ Upload product image</h1>
               <div>
-                <h1 className={' py-7 ' + style.sub}>Product name</h1>
+                <h1 className={'  py-2 md:py-7 ' + style.sub}>Product name</h1>
                 <input className={' '+style.input} type="text" name="" id="" placeholder='enter product name' />
               </div>
               <div className=' flex justify-between items-center gap-5'>
                 <div>
-                <h1 className={' py-7 ' + style.sub}>Units(available)</h1>
+                <h1 className={'  py-2 md:py-7 ' + style.sub}>Units(available)</h1>
                 <input className={' '+style.input} type="text" />
                 </div>
                 <div>
-                <h1 className={' py-7 ' + style.sub}>SKU(optional)</h1>
+                <h1 className={'  py-2 md:py-7 ' + style.sub}>SKU(optional)</h1>
                 <input className={' '+style.input} type="select" />
                 </div>
                 <div>
-                <h1 className={' py-7 ' + style.sub}>Category</h1>
+                <h1 className={'  py-2 md:py-7 ' + style.sub}>Category</h1>
                 <input className={' '+style.input} type="select" />
                 </div>
               </div>
               <div>
-              <h1 className={' py-7 ' + style.sub}>Product Description</h1>
+              <h1 className={'  py-2 md:py-7 ' + style.sub}>Product Description</h1>
               <textarea className={' '+style.input} placeholder='write description' name="" id=""></textarea>
               </div>
               <Button text={'Add Product'} lass={style.btn}  style={{color:'white', width:'100%',textAlign:'center',fontSize:"16px", margin:"10px auto"}} />
@@ -170,7 +170,7 @@ const Products = ({}) => {
             </div>
             <form>
               <div>
-                <h1 className={' py-7 ' + style.sub} style={catExists?{color:'red'}:null}>{catExists?'Category already exists':'Category Name'}</h1>
+                <h1 className={' py-2 md:py-7 ' + style.sub} style={catExists?{color:'red'}:null}>{catExists?'Category already exists':'Category Name'}</h1>
                 <input className={' '+style.input} type="text" name="" id="" placeholder='enter category name' value={newCat} onChange={(e)=>{setNewCat(e.target.value)}}/>
               </div>
               
