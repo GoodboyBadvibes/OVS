@@ -52,7 +52,7 @@ const Products = ({}) => {
       post: 'Risk Management',
       category:'Psychiatry',
       customer:'John Doe',
-      status:'successful',
+      status:'failed',
       date:'12 Nov 2023',
     },
     {
@@ -92,8 +92,8 @@ const Products = ({}) => {
       post: 'Risk Management',
       category: 'Psychiatry',
       customer: 'John Doe',
-      date: '12 Nov 2023',
       status: 'successful',
+      date: '12 Nov 2023',
     },
    ]
 
