@@ -1,39 +1,32 @@
 import React from 'react'
 import style from "../../Style/Dashboard style/table.module.css"
+import Image from 'next/image'
 
-const Table = ({ data }) => {
-  let className=''
-  let status=false
-
-
-
-  data.forEach((data)=>{
-
-    Object.entries(data).forEach(([key, value]) => {
-      if (key.trim().toLowerCase() === 'status') {
-        status=true
-        className = value==='successful'?style.success:''
-      }else{
-        
-      }
-    })
-  })
+const Table = ({ data, title }) => {
 
 
   return (
     <div className={style.table} style={{ overflowX: 'scroll', borderRadius: '15px', marginTop: '50px', scrollbarWidth: '0' }}>
 
-      <table style={{ width: ' 100%', backgroundColor: 'white', borderRadius: '10px', minWidth: '1160px' }}>
+      <table className={style.tableMedia} style={{ backgroundColor: 'white', borderRadius: '10px'}}>
 
         <tbody className={style.body}>
 
 
 
           <tr className={style.head}>
-            {Object.keys(data[0]).map((key) => (
-              <th style={{ borderLeft: '1px solid white' }}>{key}</th>
+            {title.map((title) => (
+              <th style={{ borderLeft: '1px solid white' }}>
+                <div className={' flex items-center '+style.norm+' '+style.genStyle}>
+                  <h1 className={' '}>{title}</h1>
+                  <i className="ri-arrow-down-wide-fill"></i>
+                </div>
+              </th>
             ))}
-            <th>Action</th>
+            <th className={' '+style.norm}>
+                <h1 className={' '+style.genStyle}>Action</h1>
+            </th>
+            
           </tr>
 
           {data.map(
@@ -63,13 +56,21 @@ const Table = ({ data }) => {
                       ))} */}
                       {Object.entries(data).map(([key, value]) => {
                          if(key.trim().toLowerCase() === 'status'){
-                          console.log((value.trim().toLowerCase()==='successful')?style.success:style.failed)
-                              return (<td className={' '+((value.trim().toLowerCase()==='successful')?style.success:style.failed)}>{value}</td>)
+                              return (<td className={style.status}> <div className={' '+style.genStyle}> <h1 className={' '+((value.trim().toLowerCase()==='successful')?style.success:style.failed)}>{value}</h1></div></td>)
+                         }else if(key.trim().toLowerCase() === 'customer'){
+                          return <td>
+                            <div className={' flex gap-5 items-center '+style.genStyle} >
+                              {/* <Image src={value.pic} width={26} height={26} style={{borderRadius:'99999px'}}/> */}
+                              <div className={' '+style.dp} style={{backgroundImage:`url(${value.pic})`}}></div>
+                              <h1 className={' '+style.norm}>{value.name}</h1>
+
+                            </div>
+                          </td>
                          }else{
-                          return <td>{value}</td>
+                          return <td className={' '+((key.trim().toLowerCase() === 'id')?style.id:style.norm)}> <div className={' '+style.genStyle}>{value}</div></td>
                          }
 })}
-                <td>...</td>
+                <td className={' '+style.action}>...</td>
               </tr>
             )
           )}

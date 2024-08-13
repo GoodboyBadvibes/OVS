@@ -13,57 +13,78 @@ const Summary = ({expand}) => {
       ID:1,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
-      status:'successful',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       date:'12 Nov 2023',      
+      status:'successful',
     },
     {
       ID:2,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
-      status:'successful',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       date:'12 Nov 2023',      
+      status:'successful',
     },
     {
       ID:3,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
-      status:'successful',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       date:'12 Nov 2023',      
+      status:'successful',
     },
     {
       ID:4,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
-      status:'failed',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       date:'12 Nov 2023',      
+      status:'failed',
     },
     {
       ID:5,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
-      status:'successful',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       date:'12 Nov 2023',      
+      status:'successful',
     },
     {
       ID:6,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
-      status:'successful',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       date:'12 Nov 2023',      
+      status:'successful',
     },
     {
       ID:7,
       post: 'Risk Management',
       category: 'Psychiatry',
-      customer: 'John Doe',
-      status: 'successful',
+      customer: {
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       date: '12 Nov 2023',
+      status: 'successful',
     },
    ]
 
@@ -84,7 +105,7 @@ const Summary = ({expand}) => {
         </div>
 
         <div>
-          <Table data={data} />
+          <Table data={data} title={['ID', 'Post Title','Category','Customer','Date','Status']} />
         </div>
 
         

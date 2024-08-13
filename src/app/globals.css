@@ -51,7 +51,18 @@ body{
 }
 
 td, th{
+  position: relative;
   padding: 10px;
+}
+td::after, th::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right
+  ,rgb(227, 227, 227),rgba(0, 0, 0, 0.509),rgb(209, 209, 209));
 }
 
 @media screen and (max-width:670px){

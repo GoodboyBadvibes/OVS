@@ -1,8 +1,16 @@
 .table::-webkit-scrollbar{
   display: none;
 }
+.tableMedia{
+  width: 100%;
+}
 .body{
   border-radius: 0px ;
+}
+.genStyle{
+
+  /* padding: 10px; */
+  /* margin: 5px; */
 }
 
 .head, .row {
@@ -10,10 +18,105 @@
   padding: 5000px;
   /* border-left: 1px solid rgb(195, 194, 196); */
 }
+.status{
+  width:10%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.date{
+  width: 20%;
+  font-size: 14px;
+  font-weight: 600;
+}
+.norm{
+  /* width: 26%; */
+  font-size: 14px;
+  font-weight: 600;
+}
+.id{
+  width: 0.5%;
+  font-size: 14px;
+  font-weight: 600;
+}
+.action{
+  width:1%;
+  font-size: 14px;
+  font-weight: 600;
+}
 
 .success{
-  color: green;
+  color: rgb(39, 174, 96);
+  background-color: #27ae5f51;
+  padding: 8px 8px 8px 8px ;
+  border-radius: 10px;
+  /* width: 80px;
+  text-align: center; */
 }
 .failed{
-  color: red;
+  color: rgb(255, 98, 0);
+  background-color: rgba(255, 0, 0, 0.159);
+  padding: 8px 8px 8px 8px ;
+  border-radius: 10px;
+  text-align: center;
 }
+.dp{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    padding: 13px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:980px){
+  .status{
+    font-size: 8px;
+  }
+  .norm{
+    font-size: 9px;
+  }
+  .id{
+    font-size: 9px;
+  }
+  .action{
+    font-size: 9px;
+  }
+}
+@media screen and (max-width:755px){
+  .status{
+    font-size: 6px;
+  }
+  .norm{
+    font-size: 6.5px;
+  }
+  .id{
+    font-size: 6.5px;
+  }
+  .action{
+    font-size: 6.5px;
+  }
+}
+@media screen and (max-width:520px){
+  .tableMedia{
+    min-width: 900px;
+  }
+  .status{
+    font-size: 10px;
+  }
+  .norm{
+    font-size: 12px;
+  }
+  .id{
+    font-size: 12px;
+  }
+  .action{
+    font-size: 12px;
+  }
+}
+
+/* @media screen and (max-width:1060px){
+  .date{
+    width: 20%;
+  }
+} */

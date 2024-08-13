@@ -115,7 +115,7 @@ const Products = ({}) => {
           </div>
         </div>
 
-        <Table data={data} />
+        <Table data={data} title={['ID', 'Post Title','Category','Customer','Date','Status']}/>
       </div>
 
       {addPro&&(<div className={' ' + style.modalDiv}>
