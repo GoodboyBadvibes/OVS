@@ -62,7 +62,7 @@ td::after, th::after{
   right: 0;
   height: 1px;
   background: linear-gradient(to right
-  ,rgb(227, 227, 227),rgba(0, 0, 0, 0.509),rgb(209, 209, 209));
+  ,rgb(218, 218, 218),rgba(0, 0, 0, 0.272),rgb(255, 255, 255));
 }
 
 @media screen and (max-width:670px){
