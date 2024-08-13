@@ -32,10 +32,10 @@ const Dashboard = () => {
   return (
     <>
 
-    <div className= '  left-0 justify-between items-start m-auto'  >
+    <div className= '  left-0 justify-between items-start m-auto' >
     <Dashbar title={component}/>
 
-    <aside className=' relative'>
+    <aside className=' relative' id='menu'>
       
        <div className={' h-screen bg-backdark fixed transition-all shadow-2xl z-10  '+(expand? style.dashboardNotExpanded : style.dashboardExpanded)} style={{color:'white'}} >
 
