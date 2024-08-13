@@ -27,7 +27,7 @@ const Dashbar = ({title}) => {
 
               <div className=' flex justify-between items-center' style={{gap:'10px'}}>
 
-                <div className={' rounded-full  bg-standard '+style.dp}  >
+                <div className={' rounded-full  bg-standard '+style.dp} style={{backgroundImage:'url(/dp.jpg)'}} >
                   {/* <Image src={'/dp.png'} className=' ' style={{backgroundImage:' ', borderRadius:'100%',objectFit:'cover',objectPosition:'cover'}}  width={50} height={50} /> */}
                 </div>
 
