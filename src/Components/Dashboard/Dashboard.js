@@ -32,7 +32,7 @@ const Dashboard = () => {
   return (
     <>
 
-    <div className= '  left-0 justify-between items-start m-auto' >
+    <div className= '  left-0 justify-between items-start m-auto ' >
     <Dashbar title={component}/>
 
     <aside className=' relative' id='menu'>
@@ -86,7 +86,7 @@ const Dashboard = () => {
      <Content component={component} expand={expand} />
      
       {/* This section is for dashboard mobile menu which is hidden for larger screens */}
-      <div style={{backgroundColor:'rgb(36,36,36)', color:'white'}} id='navMenu' className=' fixed top-0 sm:hidden w-full h-full hidden' >
+      <div style={{backgroundColor:'rgb(36,36,36)', zIndex:'99999', color:'white'}} id='navMenu' className=' fixed top-0 sm:hidden w-full h-full hidden' >
         <div className=" flex justify-end">
           <i className=" ri-close-fill cursor-pointer text-end items-end border-2 " style={{margin:'20px 25px', fontSize:'15px', borderRadius:'100%', padding:'0px 4px'}} onClick={()=>{document.querySelector('#navMenu').classList.add('hidden')}}></i>
         </div>
