@@ -7,11 +7,6 @@
 .body{
   border-radius: 0px ;
 }
-.genStyle{
-
-  /* padding: 10px; */
-  /* margin: 5px; */
-}
 
 .head, .row {
   text-align: left;
@@ -41,8 +36,34 @@
 }
 .action{
   width:1%;
+  padding: 10px;
   font-size: 14px;
   font-weight: 600;
+}
+.actionItem{
+  border-bottom: 0.5px solid ;
+  padding: 3px;
+  gap: 5px;
+}
+.actionItem:hover{
+  cursor: pointer;
+  background-color: #859f27ca;
+  border-radius: 5px;
+  border-bottom: none;
+  box-shadow: black 0.5px 0.5px;
+}
+.actionMenu{
+  position: absolute;
+  width: 100px;
+  font-size: 12px;
+  background-color: #859f27ca;
+  padding: 16px;
+  border-radius: 10px;
+  backdrop-filter: blur(0.5px) brightness(1);
+  right: 0;
+  top: 0;
+  z-index: 9999999999999999999;
+  /* transform: translate(-150%,-100%); */
 }
 
 .success{
@@ -100,6 +121,7 @@
 @media screen and (max-width:520px){
   .tableMedia{
     min-width: 900px;
+    overflow-x: scroll;
   }
   .status{
     font-size: 10px;

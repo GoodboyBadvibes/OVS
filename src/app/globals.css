@@ -50,11 +50,12 @@ body{
   padding-left: 90px !important;
 }
 
-td, th{
+.td, th{
   position: relative;
   padding: 10px;
+  z-index: 999;
 }
-td::after, th::after{
+.td::after, th::after{
   content: '';
   position: absolute;
   bottom: 0;
