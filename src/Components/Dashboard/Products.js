@@ -43,7 +43,10 @@ const Products = ({}) => {
       ID:1,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       status:'successful',
       date:'12 Nov 2023',
     },
@@ -51,7 +54,10 @@ const Products = ({}) => {
       ID:2,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       status:'failed',
       date:'12 Nov 2023',
     },
@@ -59,7 +65,10 @@ const Products = ({}) => {
       ID:3,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       status:'successful',
       date:'12 Nov 2023',
     },
@@ -67,7 +76,10 @@ const Products = ({}) => {
       ID:4,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       status:'successful',
       date:'12 Nov 2023',
     },
@@ -75,7 +87,10 @@ const Products = ({}) => {
       ID:5,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       status:'successful',
       date:'12 Nov 2023',
     },
@@ -83,7 +98,10 @@ const Products = ({}) => {
       ID:6,
       post: 'Risk Management',
       category:'Psychiatry',
-      customer:'John Doe',
+      customer:{
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
       status:'successful',
       date:'12 Nov 2023',
     },
