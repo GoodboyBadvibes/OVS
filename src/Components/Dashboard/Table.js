@@ -10,7 +10,7 @@ const Table = ({ data, title }) => {
 
 
   return (
-    <div className={style.table} style={{overflowX: 'scroll', borderRadius: '15px', marginTop: '50px', scrollbarWidth: '0' }}>
+    <div className={style.table} style={{borderRadius: '15px', marginTop: '50px', scrollbarWidth: '0' }}>
 
       <table className={style.tableMedia} style={{ overflowX: 'scroll', backgroundColor: 'white', borderRadius: '10px'}}>
 

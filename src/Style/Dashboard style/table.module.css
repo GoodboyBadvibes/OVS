@@ -1,6 +1,10 @@
 .table::-webkit-scrollbar{
   display: none;
 }
+.table{
+  overflow-y: visible;
+  background-color: blue;
+}
 .tableMedia{
   width: 100%;
 }
@@ -39,6 +43,8 @@
   padding: 10px;
   font-size: 14px;
   font-weight: 600;
+  user-select: none;
+
 }
 .actionItem{
   border-bottom: 0.5px solid ;
@@ -62,7 +68,7 @@
   backdrop-filter: blur(0.5px) brightness(1);
   right: 0;
   top: 0;
-  z-index: 9999999999999999999;
+  /* z-index: 9999999999999999999; */
   /* transform: translate(-150%,-100%); */
 }
 
@@ -120,7 +126,7 @@
 }
 @media screen and (max-width:520px){
   .tableMedia{
-    min-width: 900px;
+    min-width: 1100px;
     overflow-x: scroll;
   }
   .status{
