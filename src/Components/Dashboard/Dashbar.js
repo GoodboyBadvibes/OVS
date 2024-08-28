@@ -10,8 +10,8 @@ const Dashbar = ({title}) => {
 
   return (
     <>
-      <div className=' shadow-2xl'  style={{}}>
-       <div id='dashbar' className={style.nav+ ' contentExpanded '} >
+      <div className=' shadow-2xl'  style={{zIndex:''}}>
+       <div id='dashbar' style={{zIndex:'9'}} className={style.nav+ ' contentExpanded '} >
         <div className=' hidden  sm:flex justify-between items-center'> 
            <div>
             <h1 className={ style.header}>Dashboard</h1>

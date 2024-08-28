@@ -32,7 +32,7 @@ const Dashboard = () => {
   return (
     <>
 
-    <div className= '  left-0 justify-between items-start m-auto ' >
+    <div className= '  left-0 justify-between items-start m-auto ' style={{zIndex:'99'}}>
     <Dashbar title={component}/>
 
     <aside className=' relative' id='menu'>
