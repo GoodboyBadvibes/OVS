@@ -31,9 +31,9 @@
   padding: 20px;
   transition: 1s linear;
 }
-.dp:hover{
+/* .dp:hover{
    transform: scale(2);
-}
+} */
 
 @media screen and (max-width:670px){
   .header{
