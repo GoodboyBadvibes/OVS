@@ -2,8 +2,8 @@
   display: none;
 }
 .table{
-  overflow-y: visible;
-  background-color: blue;
+  /* background-color: blue; */
+  padding-bottom: 100px;
 }
 .tableMedia{
   width: 100%;
@@ -50,6 +50,7 @@
   border-bottom: 0.5px solid ;
   padding: 3px;
   gap: 5px;
+  font-size: 12px;
 }
 .actionItem:hover{
   cursor: pointer;
@@ -61,14 +62,13 @@
 .actionMenu{
   position: absolute;
   width: 100px;
-  font-size: 12px;
   background-color: #859f27ca;
   padding: 16px;
   border-radius: 10px;
   backdrop-filter: blur(0.5px) brightness(1);
   right: 0;
   top: 0;
-  /* z-index: 9999999999999999999; */
+  z-index: 9999999999999999999;
   /* transform: translate(-150%,-100%); */
 }
 
@@ -95,6 +95,10 @@
     padding: 13px;
     border-radius: 50%;
 }
+.stckBtn{
+  width: 20px;
+  height: 20px;
+}
 
 @media screen and (max-width:980px){
   .status{
@@ -109,6 +113,14 @@
   .action{
     font-size: 9px;
   }
+  .actionItem{
+    font-size: 10px;
+    padding: 1px;
+  }
+  .actionMenu{
+    padding: 10px;
+    width: 80px;
+  }
 }
 @media screen and (max-width:755px){
   .status{
@@ -122,6 +134,18 @@
   }
   .action{
     font-size: 6.5px;
+  }
+  .stckBtn{
+    width: 15px;
+    height: 15px;
+  }
+  .actionItem{
+    font-size: 7px;
+    padding: 1px;
+  }
+  .actionMenu{
+    padding: 7px;
+    width: 70px;
   }
 }
 @media screen and (max-width:520px){
@@ -140,6 +164,14 @@
   }
   .action{
     font-size: 12px;
+  }
+  .actionItem{
+    font-size: 12px;
+    padding: 3px;
+  }
+  .actionMenu{
+    padding: 16px;
+    width: 100px;
   }
 }
 
