@@ -30,18 +30,18 @@ const Action = ({}) => {
 
   return (
     <>
-    <div style={{position:' relative '}} >
-    <p style={{cursor:'pointer', position:' relative '}} onClick={toggle}>...</p>
+    <div style={{position:' relative '}} onClick={toggle}>
+    <p style={{cursor:'pointer', position:' relative '}} >...</p>
     {action&&<div ref={actionRef} className={' z-20 '+style.actionMenu}>
-    <div className={' flex justify-start  items-start ' +style.actionItem}>
+    <div className={' flex justify-start  items-center ' +style.actionItem}>
       <Image src={view} />
       <h1>View</h1>
     </div>
-    <div className={' flex justify-start  items-start ' +style.actionItem}>
+    <div className={' flex justify-start  items-center ' +style.actionItem}>
       <Image src={check} />
       <h1>Copy</h1>
     </div>
-    <div className={' flex justify-normal  items-start ' +style.actionItem}>
+    <div className={' flex justify-normal  items-center ' +style.actionItem}>
       <Image src={close} />
       <h1>Report</h1>
     </div>
