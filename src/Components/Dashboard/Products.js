@@ -41,77 +41,59 @@ const Products = ({}) => {
 
     {
       ID:1,
-      post: 'Risk Management',
+      name: 'Risk Management',
       category:'Psychiatry',
-      customer:{
-        name:'John Doe', 
-        pic: '/dp.jpg'
-      },
-      status:'successful',
+      amount:'$4200',
+      stock:2,
       date:'12 Nov 2023',
     },
     {
       ID:2,
-      post: 'Risk Management',
+      name: 'Risk Management',
       category:'Psychiatry',
-      customer:{
-        name:'John Doe', 
-        pic: '/dp.jpg'
-      },
-      status:'failed',
+      amount:'$4200',
+      stock:2,
       date:'12 Nov 2023',
     },
     {
       ID:3,
-      post: 'Risk Management',
+      name: 'Risk Management',
       category:'Psychiatry',
-      customer:{
-        name:'John Doe', 
-        pic: '/dp.jpg'
-      },
-      status:'successful',
+      amount:'$4200',
+      stock:2,
       date:'12 Nov 2023',
     },
     {
       ID:4,
-      post: 'Risk Management',
+      name: 'Risk Management',
       category:'Psychiatry',
-      customer:{
-        name:'John Doe', 
-        pic: '/dp.jpg'
-      },
-      status:'successful',
+      amount:'$4200',
+      stock:2,
       date:'12 Nov 2023',
     },
     {
       ID:5,
-      post: 'Risk Management',
+      name: 'Risk Management',
       category:'Psychiatry',
-      customer:{
-        name:'John Doe', 
-        pic: '/dp.jpg'
-      },
-      status:'successful',
+      amount:'$4200',
+      stock:2,
       date:'12 Nov 2023',
     },
     {
       ID:6,
-      post: 'Risk Management',
+      name: 'Risk Management',
       category:'Psychiatry',
-      customer:{
-        name:'John Doe', 
-        pic: '/dp.jpg'
-      },
-      status:'successful',
+      amount:'$4200',
+      stock:2,
       date:'12 Nov 2023',
     },
     {
       ID:7,
-      post: 'Risk Management',
-      category: 'Psychiatry',
-      customer: 'John Doe',
-      status: 'successful',
-      date: '12 Nov 2023',
+      name: 'Risk Management',
+      category:'Psychiatry',
+      amount:'$4200',
+      stock:2,
+      date:'12 Nov 2023',
     },
    ]
 
@@ -133,7 +115,7 @@ const Products = ({}) => {
           </div>
         </div>
 
-        <Table data={data} title={['ID', 'Post Title','Category','Customer','Date','Status']}/>
+        <Table data={data} title={['ID', 'Name','Category','Amount','Stock','Date']}/>
       </div>
 
       {addPro&&(<div className={' ' + style.modalDiv}>
@@ -160,7 +142,14 @@ const Products = ({}) => {
                 </div>
                 <div>
                 <h1 className={'  py-2 md:py-7 ' + style.sub}>Category</h1>
-                <input className={' '+style.input} type="select" />
+                <select className={' ' +style.input} style={{cursor:'pointer'}} name="title" id="title">
+                  {category.map((cat) => (
+                    <option className={' ' +style.input} value={cat}>{cat}</option>
+                  )
+                    
+                  )}
+                
+              </select>
                 </div>
               </div>
               <div>
