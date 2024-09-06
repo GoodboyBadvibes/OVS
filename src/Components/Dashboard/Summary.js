@@ -86,6 +86,17 @@ const Summary = ({expand}) => {
       date: '12 Nov 2023',
       status: 'successful',
     },
+    {
+      ID:8,
+      post: 'Risk Management',
+      category: 'Psychiatry',
+      customer: {
+        name:'John Doe', 
+        pic: '/dp.jpg'
+      },
+      date: '12 Nov 2023',
+      status: 'successful',
+    },
    ]
 
 
@@ -104,9 +115,8 @@ const Summary = ({expand}) => {
           
         </div>
 
-        <div>
           <Table data={data} title={['ID', 'Post Title','Category','Customer','Date','Status']} />
-        </div>
+     
 
         
       </div>
