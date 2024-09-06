@@ -5,14 +5,15 @@ import view from '../../../public/view.png'
 import close from '../../../public/close-circle.png'
 import check from '../../../public/check_circle.png'
 import Action from '../Dashboard/Action'
+import Stock from './Stock'
 
 const Table = ({ data, title }) => {
 
 
   return (
-    <div className={style.table} style={{borderRadius: '15px', marginTop: '50px', scrollbarWidth: '0' }}>
+    <div className={style.table} style={{overflowX:'scroll',whiteSpace:'nowrap',borderRadius: '15px', marginTop: '50px', scrollbarWidth: '0' }}>
 
-      <table className={style.tableMedia} style={{ overflowX: 'scroll', backgroundColor: 'white', borderRadius: '10px'}}>
+      <table className={style.tableMedia} style={{backgroundColor: 'white', borderRadius: '10px'}}>
 
         <tbody className={style.body}>
 
@@ -59,20 +60,24 @@ const Table = ({ data, title }) => {
                          key.trim().toLowerCase() !== 'status'&& <td>{value}</td>
                       ))} */}
                       {Object.entries(data).map(([key, value]) => {
-                         if(key.trim().toLowerCase() === 'status'){
-                              return (<td className={style.status+' td'}> <div className={' '+style.genStyle}> <h1 className={' '+((value.trim().toLowerCase()==='successful')?style.success:style.failed)}>{value}</h1></div></td>)
-                         }else if(key.trim().toLowerCase() === 'customer'){
+                        if (key.trim().toLowerCase() === 'status') {
+                          return (<td className={style.status + ' td'}> <div className={' ' + style.genStyle}> <h1 className={' ' + ((value.trim().toLowerCase() === 'successful') ? style.success : style.failed)}>{value}</h1></div></td>)
+                        } else if (key.trim().toLowerCase() === 'customer') {
                           return <td className=' td'>
-                            <div className={' flex gap-5 items-center '+style.genStyle} >
+                            <div className={' flex gap-5 items-center ' + style.genStyle} >
                               {/* <Image src={value.pic} width={26} height={26} style={{borderRadius:'99999px'}}/> */}
-                              <div className={' '+style.dp} style={{backgroundImage:`url(${value.pic})`}}></div>
-                              <h1 className={' '+style.norm}>{value.name}</h1>
+                              <div className={' ' + style.dp} style={{ backgroundImage: `url(${value.pic})` }}></div>
+                              <h1 className={' ' + style.norm}>{value.name}</h1>
 
                             </div>
                           </td>
-                         }else{
-                          return <td className={' td '+((key.trim().toLowerCase() === 'id')?style.id:style.norm)}> <div className={' '+style.genStyle}>{value}</div></td>
-                         }
+                        } else if (key.trim().toLowerCase() === 'stock') {
+                          return <td className=' td'>
+                            <Stock initial={value} />
+                          </td>
+                        } else {
+                          return <td className={' td ' + ((key.trim().toLowerCase() === 'id') ? style.id : style.norm)}> <div className={' ' + style.genStyle}>{value}</div></td>
+                        }
 })}
                 <td key={index} className={' '+style.action}>
                 <Action />
