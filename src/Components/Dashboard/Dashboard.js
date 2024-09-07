@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { useState } from 'react'
 import style from '../../Style/Dashboard style/dashboard.module.css'
@@ -28,6 +28,11 @@ const Dashboard = () => {
     }
     
   }
+
+  useEffect(() => {
+    window.scrollTo({top:0, behavior:'instant'})
+  }, [component])
+  
 
   return (
     <>
